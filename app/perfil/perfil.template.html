@@ -1,0 +1,57 @@
+<div ng-include="'sidebar.html'"></div>
+<div class="wrapper ">
+    <div class="main-panel">
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+                <div class="navbar-wrapper">
+                    <a class="navbar-brand" href="">Perfil</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="material-icons">notifications</i> Notificacoes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="col-12">
+                    <h3 class="mb-4">Dados da Conta</h3>
+                    <form ng-submit="cadastro(user)">
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input class="form-control mt-2 mb-2" type="text" ng-model="user.nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input class="form-control mt-2 mb-2" type="text" ng-model="user.email">
+                        </div>
+                        <div class="form-group">
+                            <label>Senha</label>
+                            <input class="form-control mt-2 mb-2" type="password" ng-model="user.senha">
+                        </div>
+                        <div class="form-group">
+                            <label>Endereço</label>
+                            <input class="form-control mt-2 mb-2" type="text" ng-model="user.endereco" placeholder="Endereco">
+                        </div>
+                        <div class="row mt-3 mb-2" style="margin-left: 0.5px">
+                            <input class="btn btn-primary mr-2" type="submit" value="Salvar">
+                            <button class="btn btn-danger ml-2">Excluir conta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

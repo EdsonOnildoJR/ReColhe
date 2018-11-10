@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <title>Recolhe</title>
+
+    <!-- Icones -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Bower Components -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.1/ui-bootstrap-tpls.js"></script>
+
+    <link rel="stylesheet" href="material-dashboard.css">
+    <link rel="stylesheet" href="app.css"/>
+
+    <!-- API do Google Maps -->
+    <script src="bower_components/ngmap/build/scripts/ng-map.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA1_mcboukM8Cjh3iujJ6Kcoyycpdingy8&amp;sensor=false&amp;libraries=places" async defer></script>
+
+    <!-- Configuracoes -->
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+
+    <!-- Login -->
+    <script src="inicio/inicio.module.js"></script>
+    <script src="inicio/inicio.component.js"></script>
+
+    <!-- Cadastro -->
+    <script src="cadastro/cadastro.module.js"></script>
+    <script src="cadastro/cadastro.component.js"></script>
+
+    <!-- Dashboard -->
+    <script src="dashboard/dashboard.module.js"></script>
+    <script src="dashboard/dashboard.component.js"></script>
+
+    <!-- Descartar -->
+    <script src="descartar/descartar.module.js"></script>
+    <script src="descartar/descartar.component.js"></script>
+
+    <!-- Perfil -->
+    <script src="perfil/perfil.module.js"></script>
+    <script src="perfil/perfil.component.js"></script>
+
+    <!-- Itens -->
+    <script src="itens/itens.module.js"></script>
+    <script src="itens/itens.component.js"></script>
+
+    <!-- Coletar -->
+    <script src="coletar/coletar.module.js"></script>
+    <script src="coletar/coletar.component.js"></script>
+
+    <!-- Chats -->
+    <script src="chats/chats.module.js"></script>
+    <script src="chats/chats.component.js"></script>
+
+    <!-- Sobre -->
+    <script src="sobre/sobre.module.js"></script>
+    <script src="sobre/sobre.component.js"></script>
+</head>
+<body>
+    <div ng-view></div>
+</body>
+</html>

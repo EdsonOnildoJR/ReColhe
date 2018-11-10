@@ -1,0 +1,99 @@
+<div ng-include="'sidebar.html'"></div>
+<div class="wrapper ">
+    <div class="main-panel">
+        <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                    <span class="navbar-toggler-icon icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="">
+                                <i class="material-icons">notifications</i> Notificacoes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content mt-0">
+            <div class="container-fluid">
+                <div class="col-12">
+                    <h3>Meus Itens</h3>
+                    <br>
+                    <input type="text" class="form-control" ng-model="busca" placeholder="Buscar itens..." autofocus>
+                    <br>
+                    <table class="table">
+                        <thead>
+                            <th>Nome</th>
+                            <th>Endereco</th>
+                            <th>Acoes</th>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in itens | filter:busca">
+                                <td>{{item.nome}}</td>
+                                <td>{{item.endereco}}</td>
+                                <td>
+                                    <a href="" ng-click="modal(item)" data-toggle="modal" data-target="#edit"><i class="material-icons">edit</i></a>
+                                    <a href="" ng-click="modal(item)" data-toggle="modal" data-target="#del"><i class="material-icons">close</i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="editLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editLabel">Editar Item</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Nome</label>
+                    <input class="form-control" type="text" ng-model="selected.nome">
+                </div>
+                <div class="form-group">
+                    <label>Endereco</label>
+                    <input class="form-control" type="text" ng-model="selected.endereco" places-auto-complete component-restrictions="{country:'br'}">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" ng-click="alterar(selected)" data-dismiss="modal">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="del" tabindex="-1" role="dialog" aria-labelledby="delLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="delLabel">Remover Item</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Tem certeza que deseja remover o item "{{selected.nome}}"?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary" ng-click="apagar(selected)" data-dismiss="modal">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
